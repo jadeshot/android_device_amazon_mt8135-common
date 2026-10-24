@@ -25,3 +25,13 @@ timerfd_create: 1
 timerfd_settime: 1
 membarrier: 1
 cacheflush: 1
+recvfrom: 1
+sendto: 1
+sendmsg: 1
+getsockopt: 1
+setsockopt: 1
+shutdown: 1
+socketpair: 1
+bind: 1
+getsockname: 1
+getpeername: 1
