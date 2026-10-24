@@ -187,3 +187,7 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/amazon/mt8135-common/mt8135-common-vendor.mk)
+
+# Seccomp: extra syscalls needed by MTK OMX codecs in media.codec
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/seccomp/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy
