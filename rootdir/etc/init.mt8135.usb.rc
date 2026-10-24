@@ -164,3 +164,11 @@ on property:service.adb.root=1
     write /sys/class/android_usb/android0/enable 0
     start adbd
     write /sys/class/android_usb/android0/enable 1
+
+# Oreo adbd only supports FunctionFS: route "adb" through the
+# android_usb gadget's built-in ffs function and mount it for adbd
+on init
+    write /sys/class/android_usb/android0/f_ffs/aliases adb
+    mkdir /dev/usb-ffs 0770 shell shell
+    mkdir /dev/usb-ffs/adb 0770 shell shell
+    mount functionfs adb /dev/usb-ffs/adb uid=2000,gid=2000
