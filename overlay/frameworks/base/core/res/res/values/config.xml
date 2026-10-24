@@ -154,4 +154,7 @@
     <!-- When true use the linux /dev/input/event subsystem to detect the switch changes
          on the headphone/microphone jack. When false use the older uevent framework. -->
     <bool name="config_useDevInputEventForAudioJack">true</bool>
+    <!-- Leave roaming to the MTK driver/supplicant: the framework kept moving the
+         connection between access points of the same network, dropping traffic. -->
+    <bool translatable="false" name="config_wifi_framework_enable_associated_network_selection">false</bool>
 </resources>
