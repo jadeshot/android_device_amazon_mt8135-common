@@ -27,7 +27,7 @@
         </interface>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.bluetooth.a2dp</name>
+        <name>android.hardware.soundtrigger</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
@@ -85,15 +85,6 @@
             <name>IDrmFactory</name>
             <instance>default</instance>
             <instance>widevine</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>android.hardware.gatekeeper</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IGatekeeper</name>
-            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -187,15 +178,6 @@
         <version>1.0</version>
         <interface>
             <name>IWifi</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
-        <name>android.hardware.wifi.offload</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IOffload</name>
             <instance>default</instance>
         </interface>
     </hal>
