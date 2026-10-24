@@ -191,3 +191,7 @@ $(call inherit-product, vendor/amazon/mt8135-common/mt8135-common-vendor.mk)
 # Seccomp: extra syscalls needed by MTK OMX codecs in media.codec
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp/mediacodec.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy
+
+# Oreo reads camcorder profiles from /vendor/etc/media_profiles_V1_0.xml
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/media/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
