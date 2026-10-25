@@ -157,4 +157,8 @@
     <!-- Leave roaming to the MTK driver/supplicant: the framework kept moving the
          connection between access points of the same network, dropping traffic. -->
     <bool translatable="false" name="config_wifi_framework_enable_associated_network_selection">false</bool>
+    <!-- Wi-Fi-only tablet: there is no other network to switch to, so do not
+         disconnect Wi-Fi when only IPv6 provisioning is lost (e.g. an expired RA
+         route while the screen is off). -->
+    <integer translatable="false" name="config_networkAvoidBadWifi">0</integer>
 </resources>
